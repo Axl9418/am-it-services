@@ -121,19 +121,19 @@
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/thank-you.html"></form>>
 
         <!-- hidden input required by Netlify -->
-        <input type="hidden" name="form-name" value="it-support" />
+        <input type="hidden" name="contact" value="it-support" />
 
         <label for="name">Name</label>
-        <input id="name" type="text" placeholder="Your name" required />
+        <input id="name" name="name" type="text" placeholder="Your name" required />
 
         <label for="email">Email</label>
-        <input id="email" type="email" placeholder="you@example.com" required />
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
 
         <label for="message">How can I help?</label>
-        <textarea id="message" placeholder="Briefly describe the issue"></textarea>
+        <textarea id="message" name="message" placeholder="Briefly describe the issue"></textarea>
 
         <p style="display:none;">
           <label>Don’t fill this out if human:<br />
