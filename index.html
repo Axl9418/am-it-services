@@ -121,7 +121,11 @@
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <form>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+
+        <!-- hidden input required by Netlify -->
+        <input type="hidden" name="form-name" value="it-support" />
+
         <label for="name">Name</label>
         <input id="name" type="text" placeholder="Your name" required />
 
@@ -130,6 +134,12 @@
 
         <label for="message">How can I help?</label>
         <textarea id="message" placeholder="Briefly describe the issue"></textarea>
+
+        <p style="display:none;">
+          <label>Don’t fill this out if human:<br />
+            <input name="bot-field" />
+          </label>
+        </p>
 
         <button class="btn" type="submit">Send Message</button>
       </form>
